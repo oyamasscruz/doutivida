@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-doutivida-blue-primary: #073d70;
+  --color-doutivida-blue-support: #4099d0;
+  --color-doutivida-blue-light: #d7ecf7;
+  --color-doutivida-white: #ffffff;
+  --color-signal-blue: #0057ff;
+  --color-porcelain: #f8f7f4;
+  --color-quantum-blue: #2457ff;
+  --color-ice-glass: #dff7ff;
+  --font-sans: "Poppins", sans-serif;
+}
