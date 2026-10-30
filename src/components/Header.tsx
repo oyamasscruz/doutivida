@@ -134,7 +134,7 @@ export default function Header() {
             }}
           >
             <a
-              href="https://www.instagram.com/institutonura/"
+              href="https://www.instagram.com/doutivida?dlrf=MXVjaGt5aW9mamxuYg=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
