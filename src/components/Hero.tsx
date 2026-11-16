@@ -9,7 +9,7 @@ const destaques = ["Médicos com CRM", "Receita digital", "Atestado"];
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[660px] flex-col overflow-hidden md:block md:min-h-0">
+    <section className="relative isolate flex min-h-[max(640px,calc(100svh-72px))] flex-col overflow-hidden md:block md:min-h-0">
       <img
         className="absolute inset-0 -z-30 h-full w-full animate-zoom-out object-cover object-[64%_top] md:static md:z-0 md:h-auto md:object-[65%_center]"
         src={ImgHero}
@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-20 bg-linear-to-br from-sky-50/95 via-sky-100/45 via-40% to-transparent to-70% md:hidden" />
       <div className="absolute inset-0 -z-10 bg-linear-to-t from-doutivida-blue-primary via-[#1769b8]/75 via-35% to-transparent to-62% md:hidden" />
 
-      <div className="flex flex-1 flex-col px-5 pb-8 pt-16 md:absolute md:left-10 md:top-1/2 md:block md:max-w-xl md:-translate-y-1/2 md:rounded-3xl md:border md:border-white/60 md:bg-white/85 md:p-10 md:shadow-xl">
+      <div className="flex flex-1 flex-col px-4 pb-14 pt-14 sm:px-5 md:absolute md:left-10 md:top-1/2 md:block md:max-w-xl md:-translate-y-1/2 md:rounded-3xl md:border md:border-white/60 md:bg-white/85 md:p-10 md:shadow-xl">
         <h1 className="max-w-[15rem] animate-fade-up text-[1.85rem] font-bold leading-[1.12] tracking-tight text-doutivida-navy sm:max-w-sm sm:text-4xl md:max-w-none md:text-5xl">
           Consulta médica online, simples e acessível.
         </h1>
@@ -52,10 +52,10 @@ export default function Hero() {
 
         <div className="mt-auto md:mt-8">
           <p className="flex animate-fade-up items-stretch overflow-hidden rounded-full border border-white/50 bg-linear-to-r from-doutivida-navy to-doutivida-blue-primary shadow-lg shadow-doutivida-navy/30 [animation-delay:600ms]">
-            <span className="flex flex-1 items-center py-3 pl-5 pr-3 text-sm font-semibold leading-tight text-white sm:text-base">
+            <span className="flex flex-1 items-center py-5 pl-5 pr-2 text-[clamp(0.85rem,3.8vw,1.05rem)] font-semibold leading-tight text-white md:py-3 md:text-base">
               Sem sair de casa, por apenas
             </span>
-            <span className="flex items-center whitespace-nowrap rounded-full bg-linear-to-r from-[#1f80e0] to-doutivida-blue-support px-5 text-[1.75rem] font-bold text-white sm:text-4xl">
+            <span className="flex items-center whitespace-nowrap rounded-full bg-linear-to-r from-[#1f80e0] to-doutivida-blue-support px-5 text-[clamp(1.85rem,8.6vw,2.6rem)] font-bold tracking-tight text-white md:text-4xl">
               R$ 39,90
             </span>
           </p>
@@ -64,12 +64,12 @@ export default function Hero() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 flex w-full animate-fade-up items-center justify-center gap-3 rounded-full border border-white/60 bg-linear-to-r from-doutivida-blue-support to-[#1f80e0] px-6 py-4 text-lg font-semibold text-white shadow-lg shadow-sky-500/30 transition duration-300 [animation-delay:800ms] hover:brightness-105 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:focus-visible:outline-doutivida-blue-primary"
+            className="mt-8 flex w-full animate-fade-up items-center justify-center gap-3 rounded-full border border-white/60 bg-linear-to-r from-doutivida-blue-support to-[#1f80e0] px-6 py-5 text-[clamp(1.15rem,5.2vw,1.4rem)] md:mt-5 md:py-4 md:text-lg font-semibold text-white shadow-lg shadow-sky-500/30 transition duration-300 [animation-delay:800ms] hover:brightness-105 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:focus-visible:outline-doutivida-blue-primary"
           >
             Agende a sua consulta
             <svg
               viewBox="0 0 24 24"
-              className="h-5 w-5"
+              className="h-6 w-6 md:h-5 md:w-5"
               fill="none"
               stroke="currentColor"
               strokeWidth="2.2"
@@ -80,7 +80,7 @@ export default function Hero() {
             </svg>
           </a>
 
-          <ul className="mt-4 flex animate-fade-up flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-medium text-white/90 [animation-delay:1000ms] md:justify-start md:text-sm md:text-doutivida-blue-primary">
+          <ul className="mt-5 flex animate-fade-up flex-wrap justify-center gap-x-4 gap-y-1 text-[13px] font-medium text-white/90 [animation-delay:1000ms] md:justify-start md:text-sm md:text-doutivida-blue-primary">
             {destaques.map((item) => (
               <li key={item} className="flex items-center gap-1.5">
                 <svg
