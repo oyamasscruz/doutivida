@@ -170,7 +170,6 @@ export default function HowToWork() {
           </div>
 
           <div className="relative mx-auto max-w-3xl">
-            {/* Linha que conecta as etapas */}
             <div
               aria-hidden="true"
               className="absolute bottom-12 left-6 top-12 w-px bg-slate-200 md:left-8"
@@ -186,7 +185,6 @@ export default function HowToWork() {
                   }}
                 >
                   <div className="relative flex items-start gap-4 md:gap-6">
-                    {/* Ícone */}
                     <div
                       className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-200 shadow-sm md:h-16 md:w-16 ${
                         index === 4
@@ -197,7 +195,6 @@ export default function HowToWork() {
                       <IconeEtapa nome={etapa.icone} />
                     </div>
 
-                    {/* Card da etapa */}
                     <div
                       className={`min-w-0 flex-1 rounded-2xl border p-5 shadow-sm transition-colors duration-300 md:p-6 ${
                         index === 4
@@ -229,7 +226,6 @@ export default function HowToWork() {
             </ol>
           </div>
 
-          {/* CTA final */}
           <div className="mt-12 text-center md:mt-16">
             <p className="text-lg font-semibold text-doutivida-blue-primary">
               Pronto para começar?

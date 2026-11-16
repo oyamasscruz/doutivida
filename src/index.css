@@ -5,9 +5,48 @@
   --color-doutivida-blue-support: #4099d0;
   --color-doutivida-blue-light: #d7ecf7;
   --color-doutivida-white: #ffffff;
-  --color-signal-blue: #0057ff;
+  --color-doutivida-navy: #0b2545;
   --color-porcelain: #f8f7f4;
-  --color-quantum-blue: #2457ff;
-  --color-ice-glass: #dff7ff;
-  --font-sans: "Poppins", sans-serif;
+  --font-sans: "Poppins", system-ui, sans-serif;
+
+  --animate-fade-up: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-zoom-out: zoom-out 1600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes zoom-out {
+    from {
+      transform: scale(1.08);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Logo from "../assets/gemini-svg.svg";
-import Whatsapp from "../assets/whatsapp (1).png";
-import Instagram from "../assets/instagram (1).png";
+import Logo from "../assets/logo.svg";
+import Whatsapp from "../assets/whatsapp.webp";
+import Instagram from "../assets/instagram.webp";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -17,12 +17,10 @@ export default function Header() {
   return (
     <header className="relative z-50 bg-porcelain">
       <div className="flex items-center justify-between p-4 md:px-10">
-        {/* Logo */}
         <a href="/" aria-label="DoutiVida - Página inicial">
           <img className="h-auto w-40 md:w-64" src={Logo} alt="DoutiVida" />
         </a>
 
-        {/* Botão do menu mobile */}
         <button
           type="button"
           className="rounded-md p-2 text-doutivida-blue-primary hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 md:hidden"
@@ -56,7 +54,6 @@ export default function Header() {
           )}
         </button>
 
-        {/* Navegação principal */}
         <nav
           id="main-navigation"
           aria-label="Navegação principal"
@@ -104,7 +101,6 @@ export default function Header() {
                 >
                   {item.label}
 
-                  {/* Faixa animada de sublinhado azul */}
                   <span
                     aria-hidden="true"
                     className="
@@ -123,7 +119,6 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* Redes sociais - mobile */}
           <div
             className="mt-6 flex items-center gap-4 border-t border-gray-200/60 pt-4 md:hidden"
             style={{
@@ -134,7 +129,7 @@ export default function Header() {
             }}
           >
             <a
-              href="https://www.instagram.com/doutivida?dlrf=MXVjaGt5aW9mamxuYg=="
+              href="https://www.instagram.com/doutivida"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -157,10 +152,9 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Redes sociais - desktop */}
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="https://www.instagram.com/institutonura/"
+            href="https://www.instagram.com/doutivida/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
