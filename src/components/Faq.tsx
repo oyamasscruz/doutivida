@@ -15,7 +15,8 @@ const perguntas = [
   },
   {
     pergunta: "Quanto tempo demora para ser atendido?",
-    resposta: "Em média de 15 a 30 minutos após a confirmação do pagamento.",
+    resposta:
+      "Em média de 15 a 30 minutos após a confirmação do pagamento, podendo variar de acordo com o fluxo de consultas.",
   },
   {
     pergunta: "Preciso baixar algum aplicativo?",
