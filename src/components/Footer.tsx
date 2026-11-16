@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl">
         <p className="text-xl font-semibold text-white">DoutiVida</p>
         <p className="mt-2 text-sm text-slate-400">
-          Sua consulta na palma da sua mão.
+          Consulta médica online, simples e acessível.
         </p>
 
         <div className="mt-6 flex justify-center gap-5">

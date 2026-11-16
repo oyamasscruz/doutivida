@@ -9,13 +9,13 @@
   --color-porcelain: #f8f7f4;
   --font-sans: "Poppins", system-ui, sans-serif;
 
-  --animate-fade-up: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  --animate-zoom-out: zoom-out 1600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-up: fade-up 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-zoom-out: zoom-out 2600ms cubic-bezier(0.22, 1, 0.36, 1) both;
 
   @keyframes fade-up {
     from {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;

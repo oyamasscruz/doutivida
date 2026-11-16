@@ -9,9 +9,9 @@ const destaques = ["Médicos com CRM", "Receita digital", "Atestado"];
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[540px] items-center overflow-hidden md:min-h-0">
+    <section className="relative isolate flex min-h-[600px] items-end overflow-hidden md:min-h-0 md:items-center">
       <img
-        className="absolute inset-0 -z-20 h-full w-full animate-zoom-out object-cover object-[65%_center] md:static md:z-0 md:h-auto"
+        className="absolute inset-0 -z-20 h-full w-full animate-zoom-out object-cover object-[68%_top] md:static md:z-0 md:h-auto md:object-[65%_center]"
         src={ImgHero}
         srcSet={`${ImgHeroMobile} 800w, ${ImgHero} 1376w`}
         sizes="100vw"
@@ -20,26 +20,26 @@ export default function Hero() {
         fetchPriority="high"
         alt="Médico atendendo uma paciente por videochamada"
       />
-      <div className="absolute inset-0 -z-10 bg-white/45 md:hidden" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-t from-doutivida-navy/95 via-doutivida-navy/65 via-45% to-transparent to-75% md:hidden" />
 
-      <div className="w-full p-5 md:absolute md:left-10 md:top-1/2 md:w-auto md:max-w-2xl md:-translate-y-1/2 md:rounded-2xl md:border md:border-white/50 md:bg-white/75 md:p-10 md:shadow-lg">
-        <h1 className="animate-fade-up text-center text-3xl font-bold leading-tight text-doutivida-blue-primary md:text-left md:text-5xl">
-          Sua consulta na palma da sua mão
+      <div className="w-full px-5 pb-8 pt-40 md:absolute md:left-10 md:top-1/2 md:w-auto md:max-w-2xl md:-translate-y-1/2 md:rounded-2xl md:border md:border-white/50 md:bg-white/85 md:p-10 md:shadow-lg">
+        <h1 className="animate-fade-up text-center text-3xl font-bold leading-tight text-white md:text-left md:text-5xl md:text-doutivida-blue-primary">
+          Consulta médica online, simples e acessível.
         </h1>
 
-        <p className="mt-4 animate-fade-up text-center text-lg text-slate-700 [animation-delay:120ms] md:text-left md:text-xl">
-          Sem filas, sem sair de casa e por apenas{" "}
-          <span className="whitespace-nowrap rounded-md bg-white/70 px-1.5 text-2xl font-bold text-doutivida-blue-primary md:text-4xl">
+        <p className="mt-4 animate-fade-up text-center text-lg text-slate-100 [animation-delay:250ms] md:text-left md:text-xl md:text-slate-700">
+          Sem sair de casa, por apenas{" "}
+          <span className="inline-block whitespace-nowrap rounded-lg bg-white px-2.5 py-0.5 text-2xl font-bold text-doutivida-blue-primary shadow-sm md:bg-doutivida-blue-light md:text-4xl">
             R$ 39,90
           </span>
         </p>
 
-        <p className="mt-4 hidden animate-fade-up text-base leading-relaxed text-slate-600 [animation-delay:200ms] md:block">
+        <p className="mt-4 hidden animate-fade-up text-base leading-relaxed text-slate-600 [animation-delay:400ms] md:block">
           Atendimento rápido e humanizado para você e sua família. Receba
           receita digital e atestado médico direto no seu WhatsApp.
         </p>
 
-        <ul className="mt-5 flex animate-fade-up flex-wrap justify-center gap-2 [animation-delay:240ms] md:justify-start">
+        <ul className="mt-5 flex animate-fade-up flex-wrap justify-center gap-2 [animation-delay:500ms] md:justify-start">
           {destaques.map((item) => (
             <li
               key={item}
@@ -64,7 +64,7 @@ export default function Hero() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex w-full animate-fade-up items-center justify-center gap-2 rounded-lg bg-doutivida-blue-support px-6 py-4 font-bold text-porcelain shadow-md transition duration-300 [animation-delay:320ms] hover:brightness-95 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-doutivida-blue-primary md:mt-8 md:w-auto"
+          className="mt-6 inline-flex w-full animate-fade-up items-center justify-center gap-2 rounded-lg bg-doutivida-blue-support px-6 py-4 font-bold text-porcelain shadow-md transition duration-300 [animation-delay:700ms] hover:brightness-95 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-doutivida-blue-primary md:mt-8 md:w-auto"
         >
           Agende a sua consulta
           <svg

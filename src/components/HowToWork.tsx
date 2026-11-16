@@ -3,9 +3,8 @@ import { useEffect, useRef, useState } from "react";
 const etapas = [
   {
     numero: "01",
-    titulo: "Fale com um especialista",
-    descricao:
-      "Clique no botão e seja direcionado a um atendente especialista.",
+    titulo: "Fale com nossa equipe",
+    descricao: "Converse com um de nossos atendentes e inicie seu agendamento.",
     icone: "message",
   },
   {
@@ -25,8 +24,7 @@ const etapas = [
   {
     numero: "04",
     titulo: "Consulte nossos médicos",
-    descricao:
-      "Receba atendimento médico on-line com praticidade e comodidade.",
+    descricao: "Receba atendimento médico online com praticidade e comodidade.",
     icone: "medical",
   },
   {
@@ -99,25 +97,32 @@ function IconeEtapa({ nome }: IconeEtapaProps) {
 }
 
 export default function HowToWork() {
-  const secaoRef = useRef<HTMLElement>(null);
-  const [visivel, setVisivel] = useState(false);
+  const listaRef = useRef<HTMLOListElement>(null);
+  const [visiveis, setVisiveis] = useState<boolean[]>(() =>
+    etapas.map(() => false),
+  );
 
   useEffect(() => {
-    const elemento = secaoRef.current;
+    const itens = listaRef.current?.querySelectorAll("li");
 
-    if (!elemento) return;
+    if (!itens) return;
 
     const observador = new IntersectionObserver(
-      ([entrada]) => {
-        if (entrada.isIntersecting) {
-          setVisivel(true);
-          observador.disconnect();
-        }
+      (entradas) => {
+        entradas.forEach((entrada) => {
+          if (!entrada.isIntersecting) return;
+
+          const index = Number((entrada.target as HTMLElement).dataset.index);
+          setVisiveis((atual) =>
+            atual.map((valor, i) => (i === index ? true : valor)),
+          );
+          observador.unobserve(entrada.target);
+        });
       },
-      { threshold: 0.15 },
+      { threshold: 0.35, rootMargin: "0px 0px -40px 0px" },
     );
 
-    observador.observe(elemento);
+    itens.forEach((item) => observador.observe(item));
 
     return () => observador.disconnect();
   }, []);
@@ -127,10 +132,10 @@ export default function HowToWork() {
       <style>{`
         .etapa-animada {
           opacity: 0;
-          transform: translateX(-36px);
+          transform: translateX(-28px);
           transition:
-            opacity 600ms ease,
-            transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+            opacity 1000ms ease,
+            transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .etapa-animada.etapa-visivel {
@@ -149,7 +154,6 @@ export default function HowToWork() {
       `}</style>
 
       <section
-        ref={secaoRef}
         id="como-funciona"
         className="bg-porcelain px-5 py-16 md:px-10 md:py-24"
       >
@@ -175,14 +179,13 @@ export default function HowToWork() {
               className="absolute bottom-12 left-6 top-12 w-px bg-slate-200 md:left-8"
             />
 
-            <ol className="relative space-y-7 md:space-y-9">
+            <ol ref={listaRef} className="relative space-y-7 md:space-y-9">
               {etapas.map((etapa, index) => (
                 <li
                   key={etapa.numero}
-                  className={`etapa-animada ${visivel ? "etapa-visivel" : ""}`}
-                  style={{
-                    transitionDelay: visivel ? `${index * 150}ms` : "0ms",
-                  }}
+                  data-index={index}
+                  className={`etapa-animada ${visiveis[index] ? "etapa-visivel" : ""}`}
+                  style={{ transitionDelay: "150ms" }}
                 >
                   <div className="relative flex items-start gap-4 md:gap-6">
                     <div
@@ -237,7 +240,7 @@ export default function HowToWork() {
               rel="noopener noreferrer"
               className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-doutivida-blue-support px-7 py-4 font-semibold text-porcelain shadow-sm transition duration-300 hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-doutivida-blue-primary sm:w-auto"
             >
-              Falar com um especialista
+              Falar com nossa equipe
             </a>
           </div>
         </div>

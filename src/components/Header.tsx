@@ -16,9 +16,15 @@ export default function Header() {
 
   return (
     <header className="relative z-50 bg-porcelain">
-      <div className="flex items-center justify-between p-4 md:px-10">
+      <div className="flex items-center justify-between px-4 py-3 md:px-10 md:py-4">
         <a href="/" aria-label="DoutiVida - Página inicial">
-          <img className="h-auto w-40 md:w-64" src={Logo} alt="DoutiVida" />
+          <img
+            className="h-12 w-auto sm:h-14 md:h-20"
+            src={Logo}
+            alt="DoutiVida"
+            width={1432}
+            height={452}
+          />
         </a>
 
         <button

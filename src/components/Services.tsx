@@ -3,10 +3,10 @@ const WHATSAPP = "https://wa.me/5562992548400?text=";
 const servicos = [
   {
     titulo: "Videochamada",
-    subtitulo: "Cara a cara com o médico",
+    subtitulo: "Seu médico na tela do celular",
     beneficios: [
       "Consulta ao vivo pelo link enviado",
-      "Ideal para avaliar sintomas",
+      "Converse com o médico em tempo real",
       "Receita e atestado digitais",
     ],
     botao: "Agendar por vídeo",
@@ -20,7 +20,7 @@ const servicos = [
     beneficios: [
       "Gasta pouca internet",
       "Sem precisar abrir a câmera",
-      "Receita direto na conversa",
+      "Orientações médicas por mensagem",
     ],
     botao: "Chamar no WhatsApp",
     link: WHATSAPP + encodeURIComponent("Quero uma consulta pelo WhatsApp"),
